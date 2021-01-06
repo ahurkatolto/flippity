@@ -13,3 +13,4 @@ for(var dataCount=0; dataCount<data.length; dataCount++) {
 ```
 ### ❗ Important:
  - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly.
+ - Currently only works for Scavenger Hunt.
