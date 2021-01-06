@@ -12,5 +12,5 @@ for(var dataCount=0; dataCount<data.length; dataCount++) {
 }
 ```
 ### ❗ Important:
- - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly.
+ - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly. (Last tested: 2021.01.06.)
  - Currently only works for Scavenger Hunt.
