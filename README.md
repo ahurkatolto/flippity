@@ -7,10 +7,10 @@ A simple javascript code snippet to show/reveal Flippity answers immadiately upo
 4. Done. Answers are automatically filled into the textboxes.
 ### 🔣 Code to copy:
 ```js
-for(var dataCount=0; dataCount<data.length; dataCount++) {
-    document.getElementById(`a${dataCount}`).setAttribute("value",data[dataCount][2]);
+for(var i=0; i<data.length; i++) {
+    document.getElementById('a'+i).value=data[i][2];
 }
 ```
 ### ❗ Important:
- - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly. (Last tested: 2021.01.06.)
- - Currently only works for Scavenger Hunt.
+ - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly. (Last tested: 2021.03.20.)
+ - Only works for Scavenger Hunt.
