@@ -1,22 +1,16 @@
 # Hippity hoppity the answers are now my property
-A simple javascript code snippet to show/reveal Flippity answers immadiately upon opening a question and fill it automatically into the text input field so you won't have to. To disable it you can just delete the textbox content, it only fills them when you run the code.
+A simple javascript code to autofill Flippity answers. To disable it you can just delete the textbox content, it only fills them when you run the code. The funny version let's you hijack the flippity email service. The textboxes' content is used to create the email itself. Click the submit button to send it (it has a 1 minute delay).
 ### Manual use:
-1. Open the Flippity test in your browser, then open the browser's console (F12 usually, it opens a side window, look for "Console").
-2. Copy-paste this javascript code into that console.
-3. Press enter to run the script.
-4. Done. Answers are automatically filled into the textboxes.
+1. Open a Flippity test in your browser, then open the browser's console (```F12```/```Ctrl+Shift+I``` usually, it opens a side window, look for "Console").
+2. Copy-paste this javascript code into that console:
+```js
+for(let i in data) document.getElementById('a'+i).value=data[i][2]
+```
+3. Press enter to run the script, and your answers should show up in the textboxes.
 ### Automation with Tampermonkey:
 1. Install Tampermonkey into your browser. ([Link](https://www.tampermonkey.net))
-2. On the top-right, click on Tampermonkey and inside that open Dashboard.
-3. Click on the Utilites menu near the top right.
-4. Paste `https://raw.githubusercontent.com/mark-sharp/flippity/main/flippity-tamperm.js` into Install URL and click Install.
-5. Done, now whenewer a test loads, the answers will be automatically filled into the textboxes.
-### 🔣 Code to copy:
-```js
-for(var i=0; i<data.length; i++) {
-    document.getElementById('a'+i).value=data[i][2];
-}
-```
+2. Click this [link](https://github.com/mark-sharp/flippity/raw/main/flippity-tamperm.user.js) to install the basic script, or this [link](https://github.com/mark-sharp/flippity/raw/main/ultimity-tamperm.user.js) to install the funny one.
 ### ❗ Important:
- - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll fix it quickly. (Last tested: 2021.03.20.)
+ - The script can become outdated if Flippity updates their code. Please leave an issue if that happens, I'll try to fix it quickly. (Last tested: 2021.05.21.)
  - Only works for Scavenger Hunt.
+ - The funny version is just an experiment, please don't use it on real tests, if you have to, do it on Flippity's [Demo test](https://www.flippity.net/sh.php?k=1ubDVulJpW7B2NDDuHMA1CtBwRxGiehQQZzeJpExdcwQ).

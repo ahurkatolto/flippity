@@ -8,6 +8,4 @@
 // @match        *://*.flippity.net/sh.php*
 // @grant        none
 // ==/UserScript==
-for(var i=0; i<data.length; i++) {
-    document.getElementById('a'+i).value=data[i][2];
-}
+for(let i in data) document.getElementById('a'+i).value=data[i][2];
